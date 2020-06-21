@@ -1,0 +1,45 @@
+.Category {
+    height: 20px;
+    margin: 20px auto;
+}
+
+.checkbox {
+    z-index: -1;
+    opacity: 0;
+    margin-right: 10px;
+    margin-left: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox + label {
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox + label:before, .checkbox:checked + label:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -30px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: white;
+    border: 2px solid #818181ad;
+}
+
+.checkbox + label:after {
+    content: '';
+    position: absolute;
+    left: -29px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox:checked + label:after {
+    content: "";
+    text-align: center;
+    background: url(../../../assets/check.svg) 4px 4px no-repeat;
+}
